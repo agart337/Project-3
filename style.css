@@ -32,7 +32,7 @@ p {
     font-size: 5vw;
     font-family: "Cormorant Garamond", serif;
     font-weight: 400;
-    padding: 4vh 0vh 4vh 0vh;
+    padding: 5vh 0vh 2vh 0vh;
 }
 
 .school {
@@ -41,6 +41,21 @@ p {
     font-weight: 400;
     line-height: 4vw;
 }
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration-line: underline;
+    text-decoration-thickness: .03em;
+}
+
+span {
+    font-size: 2vw;
+}
+
 
 /* .right p {
     transform: rotate(270deg);
@@ -92,13 +107,13 @@ p {
 
 #bottom1 {
     position: fixed;
-    top: 83%;
+    top: 86%;
     left: -3%;
 }
 
 #bottom2 {
     position: fixed;
-    top: 81.5%;
+    top: 90%;
 }
 
 .menu p {
@@ -112,7 +127,7 @@ p {
     justify-content: space-evenly;
     gap: 70vh;
     position: fixed;
-    top: 3.5%;
+    top: 6%;
 }
 
 
@@ -120,15 +135,15 @@ p {
 
 .follower {
     position: absolute;
-    width: 15.63vw;
-    height: 27.78vh;
-    margin-top: -25px;
-    margin-left: -25px;
+    width: 200px;
+    height: 200px;
+    margin-top: -100px;
+    margin-left: -100px;
     pointer-events: none;
     border-radius: 50%;
     opacity: 0;
     animation-name: follower_animation;
-    animation-duration: 1s;
+    animation-duration: 1.2s;
     filter: blur(5px);
 }
 

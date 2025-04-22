@@ -1,4 +1,4 @@
-let colors = ["#D32C33", "#E95958", "#EE8734", "#FDCE45", "#DDE95B", "#4ED58F", "#90CFC6", "#6D7BEC", "#775BB9"];
+let colors = ["#D32C33", "#EE8734", "#FDCE45", "#4ED58F", "#90CFC6", "#6D7BEC"];
 let i = 0;
 
 document.onmousemove = function (e) {
