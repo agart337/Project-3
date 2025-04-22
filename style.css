@@ -19,6 +19,7 @@
 html,
 body {
     overscroll-behavior: none;
+    margin: 0;
 }
 
 p {
@@ -31,6 +32,7 @@ p {
     font-size: 5vw;
     font-family: "Cormorant Garamond", serif;
     font-weight: 400;
+    padding: 4vh 0vh 4vh 0vh;
 }
 
 .school {
@@ -126,8 +128,8 @@ p {
     border-radius: 50%;
     opacity: 0;
     animation-name: follower_animation;
-    animation-duration: 1.2s;
-    filter: blur(20px);
+    animation-duration: 1s;
+    filter: blur(5px);
 }
 
 @keyframes follower_animation {
