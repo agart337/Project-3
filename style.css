@@ -1,0 +1,143 @@
+/* 
+// <weight>: Use a value from 300 to 700
+// <uniquifier>: Use a unique and descriptive class name
+
+.cormorant-garamond-<uniquifier> {
+  font-family: "Cormorant Garamond", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+ */
+
+* {
+    padding: 0;
+    margin: 0;
+    /* box-sizing: border-box; */
+}
+
+html,
+body {
+    overscroll-behavior: none;
+}
+
+p {
+    font-size: 3vw;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 400;
+}
+
+.state {
+    font-size: 5vw;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 400;
+}
+
+.school {
+    font-size: 3vw;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 400;
+    line-height: 4vw;
+}
+
+/* .right p {
+    transform: rotate(270deg);
+}
+
+.right-navbar {
+    width: auto;
+    position: relative;
+    left: -3%;
+    margin: 0;
+    padding-top: 5.5vw;
+    padding-left: 0vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 70vh;
+    flex-shrink: 0;
+}
+
+.left p {
+    transform: rotate(90deg);
+}
+
+.left-navbar {
+    width: auto;
+    position: relative;
+    left: -3%;
+    gap: 70vh;
+} */
+
+/* navbars */
+.grid {
+    display: grid;
+    grid-template-columns: 5% 90% 5%;
+    height: 100vh;
+
+}
+
+.right p {
+    grid-column: 1;
+    transform: rotate(270deg);
+    display: flex;
+    justify-content: space-evenly;
+    gap: 70vh;
+    position: fixed;
+    top: 10%;
+    left: -4%;
+}
+
+#bottom1 {
+    position: fixed;
+    top: 83%;
+    left: -3%;
+}
+
+#bottom2 {
+    position: fixed;
+    top: 81.5%;
+}
+
+.menu p {
+    grid-column: 2;
+}
+
+.left p {
+    grid-column: 3;
+    transform: rotate(90deg);
+    display: flex;
+    justify-content: space-evenly;
+    gap: 70vh;
+    position: fixed;
+    top: 3.5%;
+}
+
+
+/* mouse interaction */
+
+.follower {
+    position: absolute;
+    width: 15.63vw;
+    height: 27.78vh;
+    margin-top: -25px;
+    margin-left: -25px;
+    pointer-events: none;
+    border-radius: 50%;
+    opacity: 0;
+    animation-name: follower_animation;
+    animation-duration: 1.2s;
+    filter: blur(20px);
+}
+
+@keyframes follower_animation {
+    from {
+        opacity: 0.7;
+        transform: scale(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: scale(1);
+    }
+}
