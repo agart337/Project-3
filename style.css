@@ -10,6 +10,13 @@
 }
  */
 
+@font-face {
+    font-family: 'WaldorfSchrift';
+    src: url('./WaldorfSchrift/TVA-69545.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -24,22 +31,34 @@ body {
 
 p {
     font-size: 3vw;
-    font-family: "Cormorant Garamond", serif;
-    font-weight: 400;
+    font-family: 'WaldorfSchrift';
+    font-weight: 100;
 }
 
 .state {
     font-size: 5vw;
     font-family: "Cormorant Garamond", serif;
-    font-weight: 400;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.Maharashtra {
+    padding: 1vh 0vh 2vh 0vh;
+}
+
+.Telangana {
+    padding: 5vh 0vh 2vh 0vh;
+}
+
+.Karnataka {
     padding: 5vh 0vh 2vh 0vh;
 }
 
 .school {
-    font-size: 3vw;
+    font-size: 4vw;
     font-family: "Cormorant Garamond", serif;
-    font-weight: 400;
-    line-height: 4vw;
+    font-weight: 300;
+    line-height: 4.5vw;
 }
 
 a {
@@ -47,13 +66,51 @@ a {
     text-decoration: none;
 }
 
-a:hover {
-    text-decoration-line: underline;
-    text-decoration-thickness: .03em;
+.maharashtra a:hover {
+    color: #D32C33;
+    animation: rainbow 1s linear infinite;
 }
 
+.telangana a:hover {
+    color: #FDCE45;
+    animation: rainbow 1s linear infinite;
+}
+
+.karnataka a:hover {
+    color: #6D7BEC;
+    animation: rainbow 1s linear infinite;
+}
+
+/* @keyframes rainbow {
+    0% {
+        color: #D32C33;
+    }
+
+    20% {
+        color: #EE8734;
+    }
+
+    40% {
+        color: #FDCE45;
+    }
+
+    60% {
+        color: #4ED58F;
+    }
+
+    80% {
+        color: #90CFC6;
+    }
+
+    100% {
+        color: #6D7BEC;
+    }
+} */
+
+
 span {
-    font-size: 2vw;
+    font-size: 2.5vw;
+    font-weight: 200;
 }
 
 
@@ -91,36 +148,36 @@ span {
     display: grid;
     grid-template-columns: 5% 90% 5%;
     height: 100vh;
-
 }
 
-.right p {
+.left p {
     grid-column: 1;
     transform: rotate(270deg);
     display: flex;
     justify-content: space-evenly;
     gap: 70vh;
     position: fixed;
-    top: 10%;
-    left: -4%;
+    top: 12%;
+    left: -5%;
 }
 
 #bottom1 {
     position: fixed;
     top: 86%;
-    left: -3%;
+    left: -3.5%;
 }
 
 #bottom2 {
     position: fixed;
     top: 90%;
+    right: -1%;
 }
 
 .menu p {
     grid-column: 2;
 }
 
-.left p {
+.right p {
     grid-column: 3;
     transform: rotate(90deg);
     display: flex;
@@ -128,33 +185,63 @@ span {
     gap: 70vh;
     position: fixed;
     top: 6%;
+    right: -2%;
 }
 
 
 /* mouse interaction */
-
 .follower {
     position: absolute;
-    width: 200px;
-    height: 200px;
-    margin-top: -100px;
-    margin-left: -100px;
+    width: 400px;
+    height: 400px;
+    margin-top: -200px;
+    margin-left: -200px;
     pointer-events: none;
     border-radius: 50%;
     opacity: 0;
     animation-name: follower_animation;
-    animation-duration: 1.2s;
-    filter: blur(5px);
+    animation-duration: 10s;
+    /* longer fade */
+    animation-timing-function: ease-out;
+    filter: blur(15px);
+    mix-blend-mode: multiply;
 }
 
 @keyframes follower_animation {
-    from {
-        opacity: 0.7;
-        transform: scale(0);
+    0% {
+        opacity: 0.8;
+        transform: scale(0.2);
     }
 
-    to {
-        opacity: 0;
-        transform: scale(1);
+    /*     20% {
+        opacity: 0.5;
+        transform: scale(0.5);
     }
+
+    50% {
+        opacity: 0.3;
+        transform: scale(1);
+    } */
+
+    100% {
+        opacity: 0;
+        transform: scale(2);
+    }
+}
+
+/* About page */
+
+.body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* Two equal columns */
+    gap: 2vw;
+    /* Optional: space between the columns */
+    padding: 2vw;
+}
+
+.about_images img {
+    width: 100%;
+    height: auto;
+    display: block;
 }

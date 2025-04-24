@@ -1,23 +1,31 @@
 let colors = ["#D32C33", "#EE8734", "#FDCE45", "#4ED58F", "#90CFC6", "#6D7BEC"];
 let i = 0;
 
-document.onmousemove = function (e) {
+document.addEventListener('click', function (e) {
     i++;
     let x = e.pageX;
     let y = e.pageY;
 
-    console.log("hello")
     let span = document.createElement("span");
-    span.classList.add("follower")
+    span.classList.add("follower");
     span.style.top = y + "px";
     span.style.left = x + "px";
-    span.style.backgroundColor = colors[i - 1]
-    document.body.appendChild(span)
+    span.style.backgroundColor = colors[i % colors.length];
+    document.body.appendChild(span);
 
-    if (i == colors.length) {
-        i = 0
-    }
+    // Remove after animation completes (10s)
     setTimeout(() => {
         span.remove();
-    }, 1000);
-}
+    }, 10000);
+});
+
+
+// document.querySelectorAll('.school div').forEach(div => {
+//     div.addEventListener('mouseenter', () => {
+//         document.body.classList.add('hovered');
+//     });
+
+//     div.addEventListener('mouseleave', () => {
+//         document.body.classList.remove('hovered');
+//     });
+// });
