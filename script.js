@@ -20,8 +20,21 @@ document.addEventListener('click', function (e) {
     }, 10000);
 });
 
+const schoolLinks = document.querySelectorAll(".school a");
+for (let link of schoolLinks) {
+    link.addEventListener('click', function (e) {
+        e.preventDefault();
 
-// abour drop down
+        // ADD CODE HERE - code before the oage changes
+
+        setTimeout(function () {
+            window.location.href = link.href;
+        }, 1000) //1000 indicates delay in miliseconds
+    })
+}
+
+
+// about drop down
 const accordions = document.querySelectorAll(".accordion");
 
 accordions.forEach(acc => {
@@ -36,3 +49,8 @@ accordions.forEach(acc => {
         }
     });
 });
+
+// background gradient
+// step 1 - percentage the user has scrolled so far
+// step 2 - in your css define the background image of a gradient - ta its bigget size possible
+// step 3 - everytime the uer scrolls use the value from step 1 to determine the size of the gradient that grows
