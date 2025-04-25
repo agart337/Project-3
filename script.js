@@ -1,3 +1,4 @@
+// mouse interaction
 let colors = ["#D32C33", "#EE8734", "#FDCE45", "#4ED58F", "#90CFC6", "#6D7BEC"];
 let i = 0;
 
@@ -20,12 +21,18 @@ document.addEventListener('click', function (e) {
 });
 
 
-// document.querySelectorAll('.school div').forEach(div => {
-//     div.addEventListener('mouseenter', () => {
-//         document.body.classList.add('hovered');
-//     });
+// abour drop down
+const accordions = document.querySelectorAll(".accordion");
 
-//     div.addEventListener('mouseleave', () => {
-//         document.body.classList.remove('hovered');
-//     });
-// });
+accordions.forEach(acc => {
+    acc.addEventListener("click", function () {
+        this.classList.toggle("active");
+
+        const panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+        } else {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+    });
+});

@@ -20,7 +20,6 @@
 * {
     padding: 0;
     margin: 0;
-    /* box-sizing: border-box; */
 }
 
 html,
@@ -29,10 +28,18 @@ body {
     margin: 0;
 }
 
-p {
+/* menu */
+.right,
+.left {
     font-size: 3vw;
     font-family: 'WaldorfSchrift';
     font-weight: 100;
+}
+
+.right:hover a,
+.left:hover a {
+    font-size: 3.5vw;
+    font-family: "Cormorant Garamond", serif;
 }
 
 .state {
@@ -58,7 +65,12 @@ p {
     font-size: 4vw;
     font-family: "Cormorant Garamond", serif;
     font-weight: 300;
-    line-height: 4.5vw;
+    line-height: 5vw;
+}
+
+span {
+    font-size: 2.5vw;
+    font-weight: 200;
 }
 
 a {
@@ -108,69 +120,11 @@ a {
 } */
 
 
-span {
-    font-size: 2.5vw;
-    font-weight: 200;
-}
-
-
-/* .right p {
-    transform: rotate(270deg);
-}
-
-.right-navbar {
-    width: auto;
-    position: relative;
-    left: -3%;
-    margin: 0;
-    padding-top: 5.5vw;
-    padding-left: 0vh;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 70vh;
-    flex-shrink: 0;
-}
-
-.left p {
-    transform: rotate(90deg);
-}
-
-.left-navbar {
-    width: auto;
-    position: relative;
-    left: -3%;
-    gap: 70vh;
-} */
-
 /* navbars */
 .grid {
     display: grid;
     grid-template-columns: 5% 90% 5%;
     height: 100vh;
-}
-
-.left p {
-    grid-column: 1;
-    transform: rotate(270deg);
-    display: flex;
-    justify-content: space-evenly;
-    gap: 70vh;
-    position: fixed;
-    top: 12%;
-    left: -5%;
-}
-
-#bottom1 {
-    position: fixed;
-    top: 86%;
-    left: -3.5%;
-}
-
-#bottom2 {
-    position: fixed;
-    top: 90%;
-    right: -1%;
 }
 
 .menu p {
@@ -185,7 +139,30 @@ span {
     gap: 70vh;
     position: fixed;
     top: 6%;
-    right: -2%;
+    right: -1.5%;
+}
+
+.left p {
+    grid-column: 1;
+    transform: rotate(270deg);
+    display: flex;
+    justify-content: space-evenly;
+    gap: 70vh;
+    position: fixed;
+    top: 12%;
+    left: -4.75%;
+}
+
+#bottom1 {
+    position: fixed;
+    top: 86%;
+    left: -3.5%;
+}
+
+#bottom2 {
+    position: fixed;
+    top: 90%;
+    right: -1%;
 }
 
 
@@ -200,10 +177,10 @@ span {
     border-radius: 50%;
     opacity: 0;
     animation-name: follower_animation;
-    animation-duration: 10s;
+    animation-duration: 5s;
     /* longer fade */
     animation-timing-function: ease-out;
-    filter: blur(15px);
+    filter: blur(10px);
     mix-blend-mode: multiply;
 }
 
@@ -234,14 +211,53 @@ span {
 .body {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    /* Two equal columns */
     gap: 2vw;
-    /* Optional: space between the columns */
-    padding: 2vw;
+    /* padding: 1vw; */
 }
 
-.about_images img {
-    width: 100%;
-    height: auto;
-    display: block;
+.heading {
+    font-size: 4vw;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 300;
+    line-height: 5vw;
+}
+
+.subheading {
+    font-size: 4vw;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 300;
+    text-transform: uppercase;
+    padding-top: 1vw;
+    padding-bottom: 1.5vw;
+}
+
+.text {
+    font-size: 2.5vw;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 300;
+    line-height: 3vw;
+}
+
+.accordion {
+    padding: 1vw;
+    transition: background-color 0.3s ease;
+}
+
+.panel {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    border-bottom: 2px solid #6D7BEC;
+    padding: 0 1vw;
+}
+
+.accordion.active+.panel {
+    max-height: auto;
+    /* adjust as needed */
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+}
+
+ol {
+    padding-left: 4vw;
 }
