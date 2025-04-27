@@ -20,6 +20,7 @@ document.addEventListener('click', function (e) {
     }, 10000);
 });
 
+// home page gradient spread
 const schoolLinks = document.querySelectorAll(".school a");
 for (let link of schoolLinks) {
     link.addEventListener('click', function (e) {
@@ -45,7 +46,7 @@ accordions.forEach(acc => {
         if (panel.style.maxHeight) {
             panel.style.maxHeight = null;
         } else {
-            panel.style.maxHeight = panel.scrollHeight + "px";
+            panel.style.maxHeight = panel.scrollHeight + "vw";
         }
     });
 });
@@ -54,3 +55,8 @@ accordions.forEach(acc => {
 // step 1 - percentage the user has scrolled so far
 // step 2 - in your css define the background image of a gradient - ta its bigget size possible
 // step 3 - everytime the uer scrolls use the value from step 1 to determine the size of the gradient that grows
+
+document.addEventListener('scroll', function () {
+    let scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+});
+

@@ -26,46 +26,38 @@ html,
 body {
     overscroll-behavior: none;
     margin: 0;
+    background-color: beige;
 }
 
 /* menu */
-.right,
-.left {
-    font-size: 3vw;
-    font-family: 'WaldorfSchrift';
-    font-weight: 100;
-}
-
-.right:hover a,
-.left:hover a {
-    font-size: 3.5vw;
-    font-family: "Cormorant Garamond", serif;
-}
-
-.state {
-    font-size: 5vw;
-    font-family: "Cormorant Garamond", serif;
-    font-weight: 300;
-    text-transform: uppercase;
-}
 
 .Maharashtra {
-    padding: 1vh 0vh 2vh 0vh;
+    padding: 3.5vh 0vh 1vh 0vh;
+    color: #EE8734;
 }
 
 .Telangana {
-    padding: 5vh 0vh 2vh 0vh;
+    padding: 3.5vh 0vh 1vh 0vh;
+    color: #6D7BEC;
 }
 
 .Karnataka {
-    padding: 5vh 0vh 2vh 0vh;
+    padding: 3.5vh 0vh 1vh 0vh;
+    color: #D32C33;
+}
+
+.state {
+    font-size: 4vw;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 400;
+    text-transform: uppercase;
 }
 
 .school {
     font-size: 4vw;
     font-family: "Cormorant Garamond", serif;
     font-weight: 300;
-    line-height: 5vw;
+    line-height: 5.2vw;
 }
 
 span {
@@ -79,56 +71,31 @@ a {
 }
 
 .maharashtra a:hover {
-    color: #D32C33;
-    animation: rainbow 1s linear infinite;
+    color: #EE8734;
+    font-weight: 300;
 }
 
 .telangana a:hover {
-    color: #FDCE45;
-    animation: rainbow 1s linear infinite;
+    color: #6D7BEC;
+    font-weight: 300;
 }
 
 .karnataka a:hover {
-    color: #6D7BEC;
-    animation: rainbow 1s linear infinite;
+    color: #D32C33;
+    font-weight: 300;
 }
-
-/* @keyframes rainbow {
-    0% {
-        color: #D32C33;
-    }
-
-    20% {
-        color: #EE8734;
-    }
-
-    40% {
-        color: #FDCE45;
-    }
-
-    60% {
-        color: #4ED58F;
-    }
-
-    80% {
-        color: #90CFC6;
-    }
-
-    100% {
-        color: #6D7BEC;
-    }
-} */
 
 
 /* navbars */
 .grid {
     display: grid;
-    grid-template-columns: 5% 90% 5%;
+    grid-template-columns: 6% 88% 6%;
     height: 100vh;
 }
 
-.menu p {
+.menu {
     grid-column: 2;
+    padding-left: 1vw;
 }
 
 .right p {
@@ -137,9 +104,6 @@ a {
     display: flex;
     justify-content: space-evenly;
     gap: 70vh;
-    position: fixed;
-    top: 6%;
-    right: -1.5%;
 }
 
 .left p {
@@ -148,23 +112,46 @@ a {
     display: flex;
     justify-content: space-evenly;
     gap: 70vh;
+}
+
+#top1 {
     position: fixed;
-    top: 12%;
-    left: -4.75%;
+    top: 15%;
+    left: -5%;
 }
 
 #bottom1 {
     position: fixed;
     top: 86%;
-    left: -3.5%;
+    left: -1.2%;
+}
+
+#top2 {
+    position: fixed;
+    top: 12%;
+    right: -3.25%;
 }
 
 #bottom2 {
     position: fixed;
-    top: 90%;
-    right: -1%;
+    top: 87%;
+    right: -0.25%;
 }
 
+.right,
+.left {
+    font-size: 3.5vw;
+    font-family: 'WaldorfSchrift';
+    font-weight: 200;
+}
+
+#bottom1:hover a {
+    color: #4ED58F;
+}
+
+#top1:hover a {
+    color: #90CFC6;
+}
 
 /* mouse interaction */
 .follower {
@@ -184,21 +171,29 @@ a {
     mix-blend-mode: multiply;
 }
 
+.followerHyperlink {
+    position: absolute;
+    width: 1080px;
+    height: 1080px;
+    margin-top: -540px;
+    margin-left: -540px;
+    pointer-events: none;
+    border-radius: 50%;
+    opacity: 0;
+    animation-name: follower_animation;
+    animation-duration: 1s;
+    /* longer fade */
+    animation-timing-function: ease-out;
+    filter: blur(10px);
+    mix-blend-mode: multiply;
+}
+
+
 @keyframes follower_animation {
     0% {
         opacity: 0.8;
         transform: scale(0.2);
     }
-
-    /*     20% {
-        opacity: 0.5;
-        transform: scale(0.5);
-    }
-
-    50% {
-        opacity: 0.3;
-        transform: scale(1);
-    } */
 
     100% {
         opacity: 0;
@@ -215,20 +210,16 @@ a {
     /* padding: 1vw; */
 }
 
-.heading {
-    font-size: 4vw;
-    font-family: "Cormorant Garamond", serif;
-    font-weight: 300;
-    line-height: 5vw;
-}
-
 .subheading {
     font-size: 4vw;
     font-family: "Cormorant Garamond", serif;
-    font-weight: 300;
     text-transform: uppercase;
+    font-weight: 400;
     padding-top: 1vw;
     padding-bottom: 1.5vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .text {
@@ -247,7 +238,7 @@ a {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease;
-    border-bottom: 2px solid #6D7BEC;
+    border-bottom: 0.15vw solid #6D7BEC;
     padding: 0 1vw;
 }
 
@@ -260,4 +251,17 @@ a {
 
 ol {
     padding-left: 4vw;
+}
+
+.arrow {
+    display: inline-block;
+    transition: transform 0.3s ease;
+    margin-left: 0;
+    padding-right: 1vw;
+    font-size: 4vw;
+}
+
+/* When accordion is active, rotate the arrow */
+.accordion.active .arrow {
+    transform: scaleY(-1);
 }
