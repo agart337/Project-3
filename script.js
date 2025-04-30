@@ -51,12 +51,31 @@ accordions.forEach(acc => {
     });
 });
 
+// menu overlay
+const icon = document.querySelector('.icon');
+const overlay = document.getElementById('overlay');
+
+// Toggle overlay on icon click
+icon.addEventListener('click', () => {
+    overlay.classList.toggle('hidden');
+});
+
+// Optional: close overlay when clicked outside menu
+overlay.addEventListener('click', (e) => {
+    if (e.target === overlay) {
+        overlay.classList.add('hidden');
+    }
+});
+
+
 // background gradient
+
 // step 1 - percentage the user has scrolled so far
 // step 2 - in your css define the background image of a gradient - ta its bigget size possible
 // step 3 - everytime the uer scrolls use the value from step 1 to determine the size of the gradient that grows
+// potential code  below for background gradient
 
-document.addEventListener('scroll', function () {
-    let scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
-});
+// document.addEventListener('scroll', function () {
+//     let scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+// });
 
