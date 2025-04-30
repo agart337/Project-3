@@ -393,6 +393,9 @@ figcaption {
     font-size: 1.2vw;
 }
 
+ol {
+    padding-left: 3vw;
+}
 
 .panel {
     max-height: 0;
