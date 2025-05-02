@@ -26,7 +26,7 @@ html,
 body {
     overscroll-behavior: none;
     margin: 0;
-    background-color: beige;
+    background-color: rgb(255, 255, 238);
     height: 100%;
     padding-bottom: 1vw;
 }
@@ -281,7 +281,8 @@ a {
 
 .text,
 .text1,
-.maharashtra-link {
+.maharashtra-link,
+.telangana-link {
     font-size: 1.7vw;
     font-family: "Cormorant Garamond", serif;
     font-weight: 500;
@@ -295,6 +296,10 @@ a {
 
 .maharashtra-link a:hover {
     color: #B7C334;
+}
+
+.telangana-link a:hover {
+    color: #36c27a;
 }
 
 /* .subheading-icon {
@@ -313,4 +318,8 @@ a {
 ol {
     padding-left: 3vw;
     margin: 0.5vw;
+}
+
+li {
+    margin: 1vw;
 }
