@@ -38,7 +38,7 @@ nextArrow.addEventListener('click', (e) => {
 });
 
 // Tridha image carousel
-const images = ["../Tridha/building.jpeg", "../Tridha/class1.jpg", "../Tridha/music.jpeg", "../Tridha/cooking.png", "../Tridha/play1.png", "../Tridha/puppet show.jpg"];
+const images = ["../Aarambh_Waldorf/6.jpg", "../Aarambh_Waldorf/2.jpg", "../Aarambh_Waldorf/4.jpg", "../Aarambh_Waldorf/5.jpg", "../Aarambh_Waldorf/1.jpg", "../Aarambh_Waldorf/8.png", "../Aarambh_Waldorf/9.png"];
 let currentIndex = 0;
 
 function changeSlide(direction) {
@@ -50,4 +50,3 @@ function changeSlide(direction) {
     }
     document.getElementById("carouselImage").src = images[currentIndex];
 }
-
