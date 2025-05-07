@@ -26,7 +26,7 @@ html,
 body {
     overscroll-behavior: none;
     margin: 0;
-    background-color: rgb(255, 255, 238);
+    background-color: rgb(254, 254, 243);
     height: 100%;
     padding-bottom: 1vw;
 }
@@ -36,10 +36,9 @@ body {
 .grid {
     display: grid;
     grid-template-columns: 2fr 3fr;
-    row-gap: 2vw;
-    column-gap: 1vw;
+    gap: 2vw;
     height: 100vh;
-    padding: 0vw 2vw 0vw 2vw;
+    padding: 0vw 3vw 0vw 2vw;
 }
 
 .column1,
@@ -61,6 +60,8 @@ body {
 .column2 {
     grid-column: 2;
     padding-bottom: 2vw;
+    width: 100%;
+    position: relative;
 }
 
 .icon-placeholder {
@@ -70,7 +71,7 @@ body {
 }
 
 .icon {
-    width: 30vw;
+    width: 10vw;
     height: 10vw;
     position: fixed;
     top: 0;
@@ -97,93 +98,66 @@ body {
     opacity: 0;
 }
 
-/* home */
-
-.title,
-.school-name {
-    font-size: 2.5vw;
-    font-family: 'Waldorf';
-    padding: 1vw 1vw 3vw 1vw;
-    margin-left: 0;
-    position: relative;
-    top: 5vw;
-}
-
-.title {
-    left: 20%;
-}
-
-.school-name {
-    left: 50%;
-}
-
-.about1 {
-    padding-top: 8vw;
-}
-
-.menu1 {
-    padding-top: 8vw;
-}
-
 /* body styling*/
 
 .Delhi,
 .delhi a:hover,
+.delhi-link a:hover,
 .subheading1 {
-    color: #D32C33;
+    color: #c8222b;
 }
 
 .UP,
 .up a:hover,
+.up-link a:hover,
 .subheading2 {
-    color: #E95958;
+    color: #db4b4b;
 }
 
 .Rajasthan,
 .rajasthan a:hover,
 .subheading3 {
-    color: #EE8734;
+    color: #fb891f;
 }
 
 .Gujarat,
 .gujarat a:hover,
+.gujarat-link a:hover,
 .subheading4 {
-    color: #ffc823;
+    color: #f8bc0a;
 }
 
 .Maharashtra,
 .maharashtra a:hover,
+.maharashtra-link a:hover,
 .subheading5 {
     color: #b7c334;
 }
 
 .Telangana,
 .telangana a:hover,
+.telangana-link a:hover,
 .subheading6 {
-    color: #36c27a;
+    color: #33a86c;
 }
 
 .Karnataka,
 .karnataka a:hover,
+.karnataka-link a:hover,
 .subheading7 {
-    color: #62C2DC;
-}
-
-.Kerala,
-.kerala a:hover,
-.subheading8 {
-    color: #5668F9;
+    color: #3abdc9;
 }
 
 .Tamil-Nadu,
 .tamil-nadu a:hover,
-.subheading9 {
-    color: #775BB9;
+.tamil-nadu-link a:hover,
+.subheading8 {
+    color: #4352c2;
 }
 
-/* school pages menu */
+/* left side menu */
 .state1 {
-    font-size: 2.5vw;
+    font-size: 2vw;
     font-family: "Cormorant Garamond", serif;
     text-transform: uppercase;
     font-weight: 500;
@@ -191,10 +165,10 @@ body {
 }
 
 .school1 {
-    font-size: 2vw;
+    font-size: 1.5vw;
     font-family: "Cormorant Garamond", serif;
     font-weight: 500;
-    /* line-height: 2.5vw; */
+    line-height: 2.1vw;
     padding: 1vh 0vh 3vh 0vh;
 }
 
@@ -203,8 +177,8 @@ span {
     font-weight: 300;
 }
 
-
-.form:hover {
+.form {
+    font-weight: 700;
     text-decoration: underline;
     text-decoration-thickness: 0.05em;
 }
@@ -245,12 +219,25 @@ a {
     }
 }
 
-/* school pages */
+/* right pages */
+
+.menu1 {
+    padding-top: 8vw;
+}
+
+.main-heading {
+    font-size: 2.5vw;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin: 5.5vw 0vw 1vw 0vw;
+}
 
 .heading {
-    font-size: 4.5vw;
-    font-family: 'Waldorf';
-    margin: 4.2vw 0vw 1vw 0vw;
+    font-size: 2.5vw;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 500;
+    margin: 5.5vw 0vw 1vw 0vw;
 }
 
 .subheading,
@@ -265,7 +252,6 @@ a {
 .subheading9 {
     font-size: 2vw;
     font-family: "Cormorant Garamond", serif;
-    text-transform: uppercase;
     font-weight: 500;
     display: flex;
     justify-content: space-between;
@@ -281,31 +267,24 @@ a {
 
 .text,
 .text1,
+.delhi-link,
+.up-link,
+.rajasthan-link,
+.gujarat-link,
 .maharashtra-link,
-.telangana-link {
-    font-size: 1.7vw;
+.telangana-link,
+.karnataka-link,
+.tamil-nadu-link {
+    font-size: 1.5vw;
     font-family: "Cormorant Garamond", serif;
     font-weight: 500;
-
+    line-height: 2vw;
 }
 
 .text1,
 .text {
     margin-bottom: 1.5vw;
 }
-
-.maharashtra-link a:hover {
-    color: #B7C334;
-}
-
-.telangana-link a:hover {
-    color: #36c27a;
-}
-
-/* .subheading-icon {
-    width: 2vw;
-    height: auto;
-} */
 
 .hyperlink-arrow {
     display: inline-block;
@@ -322,4 +301,60 @@ ol {
 
 li {
     margin: 1vw;
+}
+
+/* image carousel */
+
+.carousel {
+    position: relative;
+    width: 90%;
+    overflow: hidden;
+}
+
+.carousel img {
+    width: 100%;
+    height: auto;
+    display: block;
+
+    -webkit-mask-image:
+        linear-gradient(to top, transparent, black 1%, black 99%, transparent),
+        linear-gradient(to left, transparent, black 1%, black 99%, transparent);
+    mask-image:
+        linear-gradient(to top, transparent, black 1%, black 99%, transparent),
+        linear-gradient(to left, transparent, black 1%, black 99%, transparent);
+
+    -webkit-mask-composite: intersect;
+    mask-composite: intersect;
+
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+}
+
+.image-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.image-wrapper img {
+    width: 100%;
+    display: block;
+}
+
+.arrow {
+    position: absolute;
+    font-size: 5vw;
+    font-weight: 100;
+    background: none;
+    border: none;
+    color: black;
+    pointer-events: auto;
+    /* allow clicking */
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    z-index: 5;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
 }
