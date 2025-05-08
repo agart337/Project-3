@@ -147,12 +147,14 @@
                 <a href="https://maps.app.goo.gl/DXWYYRPasknfrYEz9" target="_blank"> Maps location <span
                         class="hyperlink-arrow">↗</span></a>
             </div>
-            <br>
             <div class="carousel">
                 <div class="carousel-track">
-                    <img id="carouselAarambh" src="#" alt="Carousel Image">
-                    <button class="prev" onclick="changeSlide(-1)"></button>
-                    <button class="next" onclick="changeSlide(1)"></button>
+                    <div class="image-wrapper" id="imageWrapper">
+                        <img src="../Uday/3.jpg" alt="Carousel Image" id="carouselImage" />
+
+                        <button class="arrow prev" id="prevArrow">☜</button>
+                        <button class="arrow next" id="nextArrow">☞</button>
+                    </div>
                 </div>
             </div>
             <div class="accordion">
@@ -258,6 +260,7 @@
         </div>
     </div>
     <script src="../script.js" async defer></script>
+    <script src="../Uday/scriptuday.js" async defer></script>
 </body>
 
 </html>

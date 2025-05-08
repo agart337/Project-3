@@ -43,7 +43,6 @@ const images = ["../​Swadhaa_Waldorf_Learning_Centre/3.jpg",
     "../​Swadhaa_Waldorf_Learning_Centre/5.jpg",
     "../​Swadhaa_Waldorf_Learning_Centre/6.jpg",
     "../​Swadhaa_Waldorf_Learning_Centre/7.jpg",
-    "../​Swadhaa_Waldorf_Learning_Centre/8.jpeg",
     "../​Swadhaa_Waldorf_Learning_Centre/9.jpg"
 ];
 let currentIndex = 0;
