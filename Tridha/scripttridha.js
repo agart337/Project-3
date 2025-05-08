@@ -37,7 +37,7 @@ nextArrow.addEventListener('click', (e) => {
     changeSlide(1);
 });
 
-// Tridha image carousel
+// image carousel
 const images = ["../Tridha/building.jpeg", "../Tridha/class1.jpg", "../Tridha/music.jpeg", "../Tridha/cooking.png", "../Tridha/play1.png", "../Tridha/puppet show.jpg"];
 let currentIndex = 0;
 
